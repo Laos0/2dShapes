@@ -1,0 +1,48 @@
+{
+  "name": "cs343-2d-webgl-base",
+  "version": "1.0.0",
+  "description": "The code base used for 2d projects in CS 343 - Computer Graphics",
+  "author": "Seth Berrier <berriers@uwstout.edu>",
+  "repository": "UWStout/gfx-2d-base-vsc",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-s clean dev-cmd",
+    "prod": "run-s clean prod-cmd",
+    "deploy": "run-s clean deploy-cmd",
+    "clean": "del-cli -f dist/*",
+    "dev-cmd": "webpack --config webpack.dev.config.js",
+    "prod-cmd": "webpack --config webpack.prod.config.js",
+    "deploy-cmd": "webpack --config webpack.deploy.config.js",
+    "test": "eslint ./src/**/**.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "css-loader": "^0.28.7",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.3.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "expose-loader": "^0.7.3",
+    "file-loader": "^1.1.6",
+    "npm-run-all": "^4.1.2",
+    "stats.js": "^0.17.0",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.4.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "nanogl": "^1.0.0"
+  }
+}
